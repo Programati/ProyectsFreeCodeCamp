@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper, Scissors game</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1>Juguemos al Piedra, Papel o Tijeras!</h1>
+    <main>
+      <details class="rules-container">
+        <summary>Reglas del juego</summary>
+
+        <p>Vas a jugar contra la IA.</p>
+        <p>Puedes elegir y cambiar entre Pidra, Papel o Tijeras.</p>
+        <p>El primero en llegar a 3 puntos gana!</p>
+
+        <p>Aqui hay algunas reglas para ganar puntos:</p>
+        <ul>
+          <li>Piedra le gana a Tijeras</li>
+          <li>Tijeras le gana a Papel</li>
+          <li>Papel le gana a Piedra</li>
+        </ul>
+        <p>
+          Si el jugador y la IA eligen el mismo elemento (Ej: Papel y Papel), entonces ninguno gana puntos.
+        </p>
+      </details>
+
+      <div class="score-container">
+        <strong
+          >Puntos del Jugador: <span class="score" id="player-score">0</span></strong
+        >
+        <strong
+          >Puntos de la IA:
+          <span class="score" id="computer-score">0</span></strong
+        >
+      </div>
+
+      <section class="options-container">
+        <h2>Elige un elemento:</h2>
+        <div class="btn-container">
+          <button id="rock-btn" class="btn">Piedra</button>
+          <button id="paper-btn" class="btn">Papel</button>
+          <button id="scissors-btn" class="btn">Tijeras</button>
+        </div>
+      </section>
+
+      <div class="results-container">
+        <p id="results-msg"></p>
+        <p id="winner-msg"></p>
+        <button class="btn" id="reset-game-btn">Jugar denuevo?</button>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

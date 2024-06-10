@@ -20,9 +20,9 @@ function addEntry() {
   const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
   const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length + 1;
   const HTMLString = `
-  <label for="${entryDropdown.value}-${entryNumber}-name">Entry ${entryNumber} Name</label>
+  <label for="${entryDropdown.value}-${entryNumber}-name">Nombre - ${entryNumber}</label>
   <input type="text" id="${entryDropdown.value}-${entryNumber}-name" placeholder="Name" />
-  <label for="${entryDropdown.value}-${entryNumber}-calories">Entry ${entryNumber} Calories</label>
+  <label for="${entryDropdown.value}-${entryNumber}-calories">Calorias - ${entryNumber}</label>
   <input
     type="number"
     min="0"
@@ -59,9 +59,9 @@ function calculateCalories(e) {
   output.innerHTML = `
   <span class="${surplusOrDeficit.toLowerCase()}">${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit}</span>
   <hr>
-  <p>${budgetCalories} Calories Budgeted</p>
-  <p>${consumedCalories} Calories Consumed</p>
-  <p>${exerciseCalories} Calories Burned</p>
+  <p>${budgetCalories} Calorias presupuestadas</p>
+  <p>${consumedCalories} Calorias consumidas</p>
+  <p>${exerciseCalories} Calorias quemadas</p>
   `;
 
   output.classList.remove('hide');
