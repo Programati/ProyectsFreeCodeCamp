@@ -136,7 +136,7 @@ function buyWeapon() {
       currentWeapon++;
       goldText.innerText = gold;
       let newWeapon = weapons[currentWeapon].name;
-      text.innerText = "You now have a " + newWeapon + ".";
+      text.innerText = "Ahora tines un " + newWeapon + ".";
       inventory.push(newWeapon);
       text.innerText += " En tu inventario tienes: " + inventory;
     } else {
