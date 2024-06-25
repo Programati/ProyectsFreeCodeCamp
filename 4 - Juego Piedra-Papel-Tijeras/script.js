@@ -1,9 +1,25 @@
+const piedraBtn = document.getElementById("piedra-btn");
+const papelBtn = document.getElementById("papel-btn");
+const tijerasBtn = document.getElementById("tijeras-btn");
 const playerScoreSpanElement = document.getElementById("player-score");
 const computerScoreSpanElement = document.getElementById("computer-score");
 const roundResultsMsg = document.getElementById("results-msg");
 const winnerMsgElement = document.getElementById("winner-msg");
 const optionsContainer = document.querySelector(".options-container");
 const resetGameBtn = document.getElementById("reset-game-btn");
+
+
+piedraBtn.addEventListener("click", function () {
+  showResults("Piedra");
+});
+
+papelBtn.addEventListener("click", function () {
+  showResults("Papel");
+});
+
+tijerasBtn.addEventListener("click", function () {
+  showResults("Tijeras");
+});
 
 function getRandomComputerResult() {
     const options = ["Piedra", "Papel", "Tijeras"];
@@ -65,19 +81,3 @@ function getRandomComputerResult() {
     };
 
     resetGameBtn.addEventListener("click", resetGame);
-
-const rockBtn = document.getElementById("rock-btn");
-const paperBtn = document.getElementById("paper-btn");
-const scissorsBtn = document.getElementById("scissors-btn");
-
-rockBtn.addEventListener("click", function () {
-  showResults("Piedra");
-});
-
-paperBtn.addEventListener("click", function () {
-  showResults("Papel");
-});
-
-scissorsBtn.addEventListener("click", function () {
-  showResults("Tijeras");
-});
